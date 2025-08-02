@@ -120,16 +120,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Dynamic slide content */}
-          <div className="mb-4">
-            <h3 className="text-lg sm:text-xl text-primary font-semibold mb-2">
-              {slides[currentSlide].title}
-            </h3>
-            <p className="text-white/90 text-base sm:text-lg">
-              {slides[currentSlide].subtitle}
-            </p>
-          </div>
-
           {/* Main headline */}
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Luxury Rooted in{" "}
@@ -144,13 +134,8 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-xl sm:text-2xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Excellence in construction execution, delivered with precision and integrity.
-          </p>
-
-          {/* Tagline */}
-          <p className="text-lg text-white/90 mb-12 font-medium drop-shadow-md">
-            Spaces that speak luxury. The future of living, built today.
           </p>
 
           {/* Call-to-action buttons */}
@@ -162,7 +147,7 @@ const Hero = () => {
             
             <Button variant="sophisticated" size="lg" className="group shadow-2xl">
               <Play className="mr-2 h-5 w-5" />
-              View Our Projects
+              Contact Us
             </Button>
           </div>
         </div>

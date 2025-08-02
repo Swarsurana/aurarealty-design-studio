@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
-      details: "Mumbai, Maharashtra",
+      details: "Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar",
       description: "Schedule an office visit"
     },
     {
@@ -253,13 +253,13 @@ const Contact = () => {
                 <Card className="gradient-sophisticated text-white shadow-elegant border-0">
                   <CardContent className="p-6 text-center">
                     <h3 className="font-display text-xl font-bold mb-2">
-                      Virtual Tour
+                      Project Inquiry
                     </h3>
                     <p className="mb-4 opacity-90">
-                      Explore our completed projects through virtual tours.
+                      Have a specific project in mind? Let's discuss your requirements.
                     </p>
                     <Button variant="warm" size="sm">
-                      Start Tour
+                      Inquire Now
                     </Button>
                   </CardContent>
                 </Card>
@@ -293,7 +293,7 @@ const Contact = () => {
               },
               {
                 question: "What areas do you serve?",
-                answer: "We primarily serve Mumbai and surrounding metropolitan areas, with selective projects in other major Indian cities."
+                answer: "We primarily serve Chh. Sambhajinagar and surrounding areas, with selective projects in other major cities."
               },
               {
                 question: "Do you handle permits and approvals?",

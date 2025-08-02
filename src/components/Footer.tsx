@@ -23,7 +23,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "Facebook", icon: <Facebook className="h-5 w-5" />, href: "#" },
-    { name: "Instagram", icon: <Instagram className="h-5 w-5" />, href: "#" },
+    { name: "Instagram", icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/auranex_realty?igsh=MWJtenF4OGdicmcxZw%3D%3D&utm_source=qr" },
     { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "#" },
     { name: "Twitter", icon: <Twitter className="h-5 w-5" />, href: "#" },
   ];
@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-white/70">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
