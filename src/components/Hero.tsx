@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight, Play } from "lucide-react";
 import construction1 from "@/assets/construction-1.webp";
 import construction2 from "@/assets/construction-2.webp";
@@ -150,14 +151,18 @@ const Hero = () => {
 
           {/* Call-to-action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="orange" size="lg" className="group shadow-2xl">
-              Start Your Dream Project
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Button variant="orange" size="lg" className="group shadow-2xl" asChild>
+              <Link to="/contact">
+                Start Your Dream Project
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
             
-            <Button variant="sophisticated" size="lg" className="group shadow-2xl">
-              <Play className="mr-2 h-5 w-5" />
-              Contact Us
+            <Button variant="sophisticated" size="lg" className="group shadow-2xl" asChild>
+              <Link to="/contact">
+                <Play className="mr-2 h-5 w-5" />
+                Contact Us
+              </Link>
             </Button>
           </div>
         </div>

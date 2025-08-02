@@ -118,8 +118,8 @@ const Footer = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="orange" size="sm" className="w-full">
-              Get Free Consultation
+            <Button variant="orange" size="sm" className="w-full" asChild>
+              <Link to="/contact">Get Free Consultation</Link>
             </Button>
           </div>
         </div>

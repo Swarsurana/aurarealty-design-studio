@@ -48,8 +48,8 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="premium" size="sm">
-              Get Consultation
+            <Button variant="premium" size="sm" asChild>
+              <Link to="/contact">Get Consultation</Link>
             </Button>
           </div>
 
@@ -85,8 +85,8 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="premium" className="w-full">
-                  Get Consultation
+                <Button variant="premium" className="w-full" asChild>
+                  <Link to="/contact">Get Consultation</Link>
                 </Button>
               </div>
             </div>
