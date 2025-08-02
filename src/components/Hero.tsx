@@ -120,6 +120,16 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
+          {/* Dynamic slide content */}
+          <div className="mb-8">
+            <h3 className="text-lg sm:text-xl text-primary font-semibold mb-2">
+              {slides[currentSlide].title}
+            </h3>
+            <p className="text-white/90 text-base sm:text-lg">
+              {slides[currentSlide].subtitle}
+            </p>
+          </div>
+
           {/* Main headline */}
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Luxury Rooted in{" "}
