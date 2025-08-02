@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -99,12 +100,12 @@ const Index = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground mb-8">
                 <p>
-                  Founded by civil engineer <strong className="text-primary">Swaraj Surana</strong>, 
-                  Auranex Realty is more than a construction company — it's a vision brought to life.
+                  Auranex Realty represents excellence in construction execution, bringing architectural visions 
+                  to life through expert project management and uncompromising quality standards.
                 </p>
                 <p>
-                  We're on a mission to create spaces the city has never seen before, with a deep 
-                  commitment to design excellence, transparency, and putting people first.
+                  We specialize in delivering luxury spaces that exceed expectations, with a commitment 
+                  to precision, integrity, and putting our clients' dreams first.
                 </p>
               </div>
               <Link to="/about">
@@ -123,8 +124,8 @@ const Index = () => {
                     alt="Auranex Realty Logo" 
                     className="h-32 w-32 mx-auto mb-6 opacity-90"
                   />
-                  <h3 className="font-display text-2xl font-bold mb-2">A New Era of Construction</h3>
-                  <p className="text-lg opacity-90">Begins Here</p>
+                  <h3 className="font-display text-2xl font-bold mb-2">Excellence in Construction</h3>
+                  <p className="text-lg opacity-90">Luxury Delivered</p>
                 </div>
               </div>
             </div>
@@ -156,18 +157,18 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Luxury Construction",
-                description: "Residential & commercial projects with premium finishes and smart technology integration.",
+                title: "Land Development & Plotting",
+                description: "Strategic land development and plotting services for residential and commercial projects.",
                 gradient: "gradient-hero"
               },
               {
-                title: "Architectural Design", 
-                description: "Innovative design solutions that blend aesthetics with functionality for maximum impact.",
-                gradient: "gradient-gold"
+                title: "Premium Residential Projects", 
+                description: "Luxury residential construction with premium finishes and modern amenities.",
+                gradient: "gradient-warm"
               },
               {
-                title: "Project Management",
-                description: "End-to-end oversight ensuring timely delivery and quality excellence in every detail.",
+                title: "Mixed-Use Developments",
+                description: "Integrated developments combining residential, commercial, and retail spaces.",
                 gradient: "gradient-sunset"
               }
             ].map((service, index) => (
@@ -231,7 +232,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button variant="gold" size="lg" className="group">
+                  <Button variant="warm" size="lg" className="group">
                     Get Free Consultation
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -247,6 +248,7 @@ const Index = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

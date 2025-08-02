@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -257,7 +258,7 @@ const Contact = () => {
                     <p className="mb-4 opacity-90">
                       Explore our completed projects through virtual tours.
                     </p>
-                    <Button variant="gold" size="sm">
+                    <Button variant="warm" size="sm">
                       Start Tour
                     </Button>
                   </CardContent>
@@ -313,6 +314,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

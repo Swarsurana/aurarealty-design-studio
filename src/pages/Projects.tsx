@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -141,7 +142,7 @@ const Projects = () => {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-premium">
                     <div className="absolute bottom-4 left-4">
-                      <Button variant="gold" size="sm" className="group">
+                      <Button variant="warm" size="sm" className="group">
                         View Details
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
@@ -222,7 +223,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="gold" size="lg" className="group">
+                  <Button variant="warm" size="lg" className="group">
                     Explore This Project
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -255,6 +256,7 @@ const Projects = () => {
           </Button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

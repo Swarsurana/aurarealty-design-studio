@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,38 +9,31 @@ const Services = () => {
   const services = [
     {
       icon: <Building className="h-12 w-12" />,
-      title: "Residential & Commercial Construction",
-      description: "Complete construction solutions from foundation to finishing, delivering spaces that exceed expectations.",
-      features: ["Modern Architecture", "Smart Home Integration", "Sustainable Materials", "Premium Finishes"],
+      title: "Land Development & Plotting",
+      description: "Strategic land development and plotting services for residential and commercial projects with proper infrastructure.",
+      features: ["Site Planning", "Infrastructure Development", "Utility Installation", "Road Construction"],
       gradient: "gradient-hero"
     },
     {
       icon: <Home className="h-12 w-12" />,
-      title: "Luxury Villa Development",
-      description: "Bespoke villa designs that redefine luxury living with personalized attention to every detail.",
-      features: ["Custom Design", "Premium Amenities", "Landscaping", "Interior Styling"],
-      gradient: "gradient-gold"
+      title: "Premium Residential & Mixed-Use Developments",
+      description: "Luxury residential construction and mixed-use developments that combine living, retail, and office spaces.",
+      features: ["Luxury Apartments", "Mixed-Use Complexes", "Premium Amenities", "Smart Infrastructure"],
+      gradient: "gradient-warm"
     },
     {
       icon: <Wrench className="h-12 w-12" />,
-      title: "Real Estate Project Management",
-      description: "End-to-end project oversight ensuring timely delivery and quality excellence.",
-      features: ["Timeline Management", "Quality Control", "Vendor Coordination", "Progress Reporting"],
+      title: "Government Contracts & Infrastructure",
+      description: "Large-scale infrastructure projects and government contracts executed with precision and compliance.",
+      features: ["Public Infrastructure", "Road Construction", "Municipal Projects", "Compliance Management"],
       gradient: "gradient-sunset"
     },
     {
-      icon: <PenTool className="h-12 w-12" />,
-      title: "Architectural Design & Consultation",
-      description: "Innovative design solutions that blend aesthetics with functionality for maximum impact.",
-      features: ["3D Visualization", "Space Planning", "Design Consultation", "Permit Assistance"],
-      gradient: "gradient-sophisticated"
-    },
-    {
       icon: <Sparkles className="h-12 w-12" />,
-      title: "Renovation & Space Makeovers",
-      description: "Transform existing spaces into modern masterpieces with our renovation expertise.",
-      features: ["Space Optimization", "Modern Upgrades", "Energy Efficiency", "Value Enhancement"],
-      gradient: "gradient-hero"
+      title: "Turnkey Solutions",
+      description: "Complete end-to-end construction solutions from planning to handover with full project management.",
+      features: ["Complete Project Management", "Quality Assurance", "Timely Delivery", "Post-Construction Support"],
+      gradient: "gradient-sophisticated"
     }
   ];
 
@@ -68,8 +62,8 @@ const Services = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              From concept to completion, we deliver exceptional construction and design services 
-              that transform visions into architectural masterpieces.
+              From land development to turnkey solutions, we deliver comprehensive construction services 
+              that transform concepts into reality through expert execution.
             </p>
             <Button variant="premium" size="lg" className="group">
               Explore Our Capabilities
@@ -131,7 +125,7 @@ const Services = () => {
               Our Boutique Process
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every project gets our full attention through our refined, client-focused approach.
+              Every project receives our complete attention through our systematic, quality-focused approach.
             </p>
           </div>
 
@@ -139,18 +133,18 @@ const Services = () => {
             {[
               {
                 step: "01",
-                title: "Listen & Understand",
-                description: "We start by understanding your vision, needs, and aspirations for the perfect space."
+                title: "Listen & Plan",
+                description: "We understand your requirements and develop comprehensive execution plans."
               },
               {
                 step: "02", 
-                title: "Design & Plan",
-                description: "Our architects create detailed plans that bring your dreams to life with precision."
+                title: "Execute & Monitor",
+                description: "Our expert teams execute projects with continuous quality monitoring and progress tracking."
               },
               {
                 step: "03",
-                title: "Build & Deliver",
-                description: "Expert construction teams execute every detail with luxury-grade quality and craftsmanship."
+                title: "Deliver & Support",
+                description: "Quality construction delivered on time with comprehensive post-completion support."
               }
             ].map((process, index) => (
               <div key={index} className="text-center">
@@ -183,7 +177,7 @@ const Services = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {ctaItems.map((cta, index) => (
-                  <Button key={index} variant="gold" size="lg" className="group">
+                  <Button key={index} variant="warm" size="lg" className="group">
                     {cta}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -193,6 +187,7 @@ const Services = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

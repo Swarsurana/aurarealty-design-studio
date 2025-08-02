@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -58,27 +59,26 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Founded by Visionary
+                Built on Excellence
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Auranex Realty is not just a construction company — it's a vision brought to life. 
-                  Founded by <strong className="text-primary font-semibold">Swaraj Surana</strong>, 
-                  a civil engineer with a passion for transformative architecture, Auranex is on a mission 
-                  to create spaces the city has never seen before.
+                  Auranex Realty is a premier construction company dedicated to executing architectural visions 
+                  with precision and excellence. Our mission is to create spaces that the city has never seen before, 
+                  delivered through expert project management and uncompromising quality standards.
                 </p>
                 <p>
-                  With a deep commitment to design excellence, transparency, and putting people first, 
-                  every project we take on becomes a landmark of purpose and personality. We don't just 
-                  build structures; we craft legacies.
+                  With a deep commitment to construction excellence, transparency, and putting people first, 
+                  every project we undertake becomes a landmark of purpose and quality. We don't just execute 
+                  construction; we craft legacies.
                 </p>
                 <p className="text-primary font-medium">
-                  "Crafted with soul. Designed to inspire."
+                  "Luxury rooted in trust, crafted for the modern world."
                 </p>
               </div>
               <div className="mt-8">
                 <Button variant="premium" size="lg">
-                  Discover Our Story
+                  Discover Our Process
                 </Button>
               </div>
             </div>
@@ -87,9 +87,9 @@ const About = () => {
               <div className="aspect-square rounded-2xl gradient-hero shadow-premium p-8 flex items-center justify-center">
                 <div className="text-center text-white">
                   <Users className="h-24 w-24 mx-auto mb-4 opacity-80" />
-                  <h3 className="font-display text-2xl font-bold mb-2">Swaraj Surana</h3>
-                  <p className="text-lg opacity-90">Founder & Visionary</p>
-                  <p className="text-sm opacity-75 mt-2">Civil Engineer</p>
+                  <h3 className="font-display text-2xl font-bold mb-2">Excellence in Execution</h3>
+                  <p className="text-lg opacity-90">Construction Leadership</p>
+                  <p className="text-sm opacity-75 mt-2">Quality Assured</p>
                 </div>
               </div>
             </div>
@@ -137,16 +137,17 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-8 opacity-95">
-              To create architectural masterpieces that transcend ordinary living spaces. 
-              We believe in boutique experiences where every project receives our undivided attention, 
-              resulting in landmarks that define luxury and innovation.
+              To execute architectural masterpieces that transcend ordinary construction projects. 
+              We believe in delivering excellence through expert project management and quality construction, 
+              resulting in landmarks that define luxury and innovation in the built environment.
             </p>
             <div className="text-lg font-medium opacity-90">
-              "A new era of construction begins here."
+              "Excellence in execution, luxury in every detail."
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

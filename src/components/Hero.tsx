@@ -1,58 +1,169 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Play } from "lucide-react";
+import construction1 from "@/assets/construction-1.webp";
+import construction2 from "@/assets/construction-2.webp";
+import construction3 from "@/assets/construction-3.webp";
+import construction4 from "@/assets/construction-4.webp";
+import construction5 from "@/assets/construction-5.webp";
 
 const Hero = () => {
+  const slides = [
+    {
+      image: construction1,
+      title: "Luxury Residential Excellence",
+      subtitle: "Premium living spaces that redefine modern comfort"
+    },
+    {
+      image: construction2,
+      title: "Commercial Development Leadership", 
+      subtitle: "Building the future of business infrastructure"
+    },
+    {
+      image: construction3,
+      title: "Villa Construction Mastery",
+      subtitle: "Exclusive homes crafted with precision and care"
+    },
+    {
+      image: construction4,
+      title: "Mixed-Use Innovation",
+      subtitle: "Integrated developments for modern communities"
+    },
+    {
+      image: construction5,
+      title: "Infrastructure Excellence",
+      subtitle: "Government projects delivered with expertise"
+    }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 gradient-hero"></div>
-      
-      {/* Geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white/30 rotate-12"></div>
-        <div className="absolute bottom-40 right-32 w-24 h-24 border-2 border-white/20 rotate-45"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-white/25 -rotate-12"></div>
+      {/* Background Slideshow */}
+      <div className="absolute inset-0">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+        ))}
       </div>
 
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-6 w-6 text-white" />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-6 w-6 text-white" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentSlide ? "bg-primary" : "bg-white/40"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
+          {/* Dynamic slide content */}
+          <div className="mb-4">
+            <h3 className="text-lg sm:text-xl text-primary font-semibold mb-2">
+              {slides[currentSlide].title}
+            </h3>
+            <p className="text-white/90 text-base sm:text-lg">
+              {slides[currentSlide].subtitle}
+            </p>
+          </div>
+
           {/* Main headline */}
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Designing Tomorrow,{" "}
-            <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Building Dreams
-            </span>{" "}
-            Today
+            Luxury Rooted in{" "}
+            <span className="text-primary drop-shadow-lg">
+              Trust
+            </span>,{" "}
+            <br />
+            Crafted for the{" "}
+            <span className="text-primary drop-shadow-lg">
+              Modern World
+            </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Luxury spaces crafted with heart, soul, and precision.
+          <p className="text-xl sm:text-2xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            Excellence in construction execution, delivered with precision and integrity.
           </p>
 
           {/* Tagline */}
-          <p className="text-lg text-white/80 mb-12 font-medium">
+          <p className="text-lg text-white/90 mb-12 font-medium drop-shadow-md">
             Spaces that speak luxury. The future of living, built today.
           </p>
 
           {/* Call-to-action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="gold" size="lg" className="group">
+            <Button variant="orange" size="lg" className="group shadow-2xl">
               Start Your Dream Project
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             
-            <Button variant="sophisticated" size="lg" className="group">
+            <Button variant="sophisticated" size="lg" className="group shadow-2xl">
               <Play className="mr-2 h-5 w-5" />
               View Our Projects
             </Button>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>

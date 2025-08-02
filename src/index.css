@@ -8,57 +8,60 @@ Inspired by architectural elegance, premium materials, and sophisticated craftsm
 
 @layer base {
   :root {
-    /* Core Brand Colors - Inspired by logo and luxury architecture */
+    /* Core Brand Colors - Orange-focused luxury palette */
     --background: 0 0% 100%;
-    --foreground: 220 13% 9%;
+    --foreground: 25 13% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 9%;
+    --card-foreground: 25 13% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 9%;
+    --popover-foreground: 25 13% 9%;
 
-    /* Primary: Sophisticated deep blue from logo buildings */
-    --primary: 215 84% 25%;
+    /* Primary: Rich warm orange from logo */
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 215 84% 35%;
+    --primary-light: 25 95% 63%;
+    --primary-dark: 25 95% 43%;
     
-    /* Secondary: Warm architectural gold */
-    --secondary: 45 93% 58%;
-    --secondary-foreground: 220 13% 9%;
-    --secondary-light: 45 93% 68%;
+    /* Secondary: Deep charcoal for sophistication */
+    --secondary: 25 13% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 25 13% 28%;
 
-    /* Accent: Logo sunset orange */
-    --accent: 25 95% 63%;
+    /* Accent: Burnt orange for highlights */
+    --accent: 20 90% 58%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 73%;
+    --accent-light: 20 90% 68%;
 
-    /* Neutral tones for sophistication */
-    --muted: 220 13% 96%;
-    --muted-foreground: 220 9% 46%;
+    /* Supporting colors */
+    --gold: 45 93% 58%;
+    --gold-light: 45 93% 68%;
     
-    --charcoal: 220 13% 18%;
-    --charcoal-light: 220 13% 28%;
-
+    /* Neutral tones */
+    --muted: 25 13% 96%;
+    --muted-foreground: 25 9% 46%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 215 84% 25%;
+    --border: 25 13% 91%;
+    --input: 25 13% 91%;
+    --ring: 25 95% 53%;
 
     --radius: 0.75rem;
 
-    /* Premium gradients */
+    /* Premium gradients with orange focus */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-sunset: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
-    --gradient-sophisticated: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--charcoal-light)));
+    --gradient-orange: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-light)));
+    --gradient-sophisticated: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--primary-light)));
     
-    /* Elegant shadows */
-    --shadow-premium: 0 20px 40px -12px hsl(var(--primary) / 0.15);
-    --shadow-gold: 0 10px 30px -10px hsl(var(--secondary) / 0.3);
-    --shadow-elegant: 0 4px 20px -4px hsl(220 13% 9% / 0.1);
+    /* Elegant shadows with orange tints */
+    --shadow-premium: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+    --shadow-orange: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 4px 20px -4px hsl(25 13% 9% / 0.1);
     
     /* Smooth transitions */
     --transition-premium: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -141,8 +144,8 @@ Inspired by architectural elegance, premium materials, and sophisticated craftsm
     background: var(--gradient-hero);
   }
   
-  .gradient-gold {
-    background: var(--gradient-gold);
+  .gradient-orange {
+    background: var(--gradient-orange);
   }
   
   .gradient-sunset {
@@ -153,13 +156,17 @@ Inspired by architectural elegance, premium materials, and sophisticated craftsm
     background: var(--gradient-sophisticated);
   }
   
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
   /* Premium shadows */
   .shadow-premium {
     box-shadow: var(--shadow-premium);
   }
   
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .shadow-orange {
+    box-shadow: var(--shadow-orange);
   }
   
   .shadow-elegant {

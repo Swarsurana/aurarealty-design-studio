@@ -31,7 +31,8 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					light: 'hsl(var(--primary-light))'
+					light: 'hsl(var(--primary-light))',
+					dark: 'hsl(var(--primary-dark))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -43,9 +44,9 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					light: 'hsl(var(--accent-light))'
 				},
-				charcoal: {
-					DEFAULT: 'hsl(var(--charcoal))',
-					light: 'hsl(var(--charcoal-light))'
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
