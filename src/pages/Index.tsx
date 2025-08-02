@@ -21,7 +21,7 @@ const Index = () => {
     },
     {
       icon: <Award className="h-8 w-8 text-accent" />,
-      title: "Boutique Experience",
+      title: "Our Process",
       description: "Every project receives our undivided attention and premium craftsmanship."
     },
     {
@@ -38,7 +38,7 @@ const Index = () => {
       role: "Luxury Villa Owner"
     },
     {
-      quote: "The boutique experience and transparency throughout the project was exceptional. Highly recommended.",
+      quote: "Our process and transparency throughout the project was exceptional. Highly recommended.",
       author: "Rajesh Gupta", 
       role: "Commercial Developer"
     }
@@ -116,15 +116,24 @@ const Index = () => {
               </Link>
             </div>
             
-            <div className="relative">
-              <div className="aspect-square rounded-2xl gradient-hero shadow-premium p-8 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <Building className="h-24 w-24 mx-auto mb-4 opacity-80" />
-                  <h3 className="font-display text-2xl font-bold mb-2">Construction Excellence</h3>
-                  <p className="text-lg opacity-90">Quality Assured</p>
-                  <p className="text-sm opacity-75 mt-2">Upcoming Projects</p>
-                </div>
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="gradient-hero p-6 text-white text-center border-0">
+                  <Users className="h-12 w-12 mx-auto mb-3 opacity-90" />
+                  <h4 className="font-semibold">Client-Focused</h4>
+                  <p className="text-sm opacity-80">Your vision, our execution</p>
+                </Card>
+                <Card className="gradient-warm p-6 text-white text-center border-0">
+                  <Award className="h-12 w-12 mx-auto mb-3 opacity-90" />
+                  <h4 className="font-semibold">Quality First</h4>
+                  <p className="text-sm opacity-80">Premium standards always</p>
+                </Card>
               </div>
+              <Card className="gradient-sophisticated p-6 text-white text-center border-0">
+                <Sparkles className="h-12 w-12 mx-auto mb-3 opacity-90" />
+                <h4 className="font-semibold mb-2">Our Process</h4>
+                <p className="text-sm opacity-90">Transparency, precision, and excellence in every step</p>
+              </Card>
             </div>
           </div>
         </div>
