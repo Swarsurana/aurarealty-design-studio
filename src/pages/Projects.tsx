@@ -55,11 +55,11 @@ const Projects = () => {
                     <Calendar className="h-12 w-12 text-white" />
                   </div>
                   <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-                    No Current Projects in Hand
+                    Projects Coming Soon
                   </h2>
                   <p className="text-xl opacity-95 mb-8 leading-relaxed">
-                    We're ready to take on new projects and bring your vision to life. 
-                    This is the perfect time to start planning your dream construction project with Auranex Realty.
+                    We are currently in the process of finalizing several exciting projects. 
+                    This section will be updated soon with our upcoming developments. Stay tuned for luxury construction projects that will redefine excellence.
                   </p>
                 </div>
                 
