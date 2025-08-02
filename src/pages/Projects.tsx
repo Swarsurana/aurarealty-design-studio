@@ -14,7 +14,7 @@ const Projects = () => {
       type: "Residential Complex",
       area: "2.5 Acres",
       year: "2024",
-      status: "Completed",
+      status: "Upcoming",
       image: "photo-1527576539890-dfa815648363",
       description: "A modern residential complex featuring luxury amenities and sustainable design principles.",
       tags: ["Luxury Living", "Sustainable", "Modern Architecture"]
@@ -26,7 +26,7 @@ const Projects = () => {
       type: "Commercial Complex",
       area: "1.8 Acres",
       year: "2024",
-      status: "Under Construction",
+      status: "Upcoming",
       image: "photo-1488972685288-c3fd157d7c7a",
       description: "State-of-the-art commercial space designed for the modern business landscape.",
       tags: ["Commercial", "Smart Building", "Premium Offices"]
@@ -38,7 +38,7 @@ const Projects = () => {
       type: "Luxury Villas",
       area: "5 Units",
       year: "2023",
-      status: "Completed",
+      status: "Upcoming",
       image: "photo-1487958449943-2429e8be8625",
       description: "Exclusive collection of luxury villas with panoramic views and premium finishes.",
       tags: ["Luxury Villas", "Exclusive", "Premium Design"]
@@ -50,7 +50,7 @@ const Projects = () => {
       type: "Mixed-Use Development",
       area: "3.2 Acres",
       year: "2024",
-      status: "Planning Phase",
+      status: "Upcoming",
       image: "photo-1496307653780-42ee777d4833",
       description: "Revolutionary mixed-use development combining workspace, retail, and residential.",
       tags: ["Mixed-Use", "Innovation", "Future-Ready"]
@@ -62,7 +62,7 @@ const Projects = () => {
       type: "Renovation",
       area: "Historic Building",
       year: "2023",
-      status: "Completed",
+      status: "Upcoming",
       image: "photo-1431576901776-e539bd916ba2",
       description: "Careful restoration of heritage architecture with modern luxury amenities.",
       tags: ["Heritage", "Restoration", "Historic Preservation"]
@@ -74,7 +74,7 @@ const Projects = () => {
       type: "Eco-Friendly Housing",
       area: "4.1 Acres",
       year: "2024",
-      status: "Under Construction",
+      status: "Upcoming",
       image: "photo-1459767129954-1b1c1f9b9ace",
       description: "Sustainable living community with eco-friendly design and green technologies.",
       tags: ["Eco-Friendly", "Sustainable", "Green Technology"]
@@ -83,9 +83,7 @@ const Projects = () => {
 
   const getStatusBadge = (status: string): "default" | "destructive" | "outline" | "secondary" => {
     const variants: Record<string, "default" | "destructive" | "outline" | "secondary"> = {
-      "Completed": "default",
-      "Under Construction": "secondary", 
-      "Planning Phase": "outline"
+      "Upcoming": "secondary"
     };
     return variants[status] || "outline";
   };
@@ -206,8 +204,8 @@ const Projects = () => {
                     Skyline Luxury Residences
                   </h2>
                   <p className="text-xl opacity-95 mb-8 leading-relaxed">
-                    Our flagship residential project that redefined luxury living in the city. 
-                    This architectural masterpiece combines sustainable design with premium amenities, 
+                    Our upcoming flagship residential project that will redefine luxury living in the city. 
+                    This architectural masterpiece will combine sustainable design with premium amenities, 
                     setting new standards for modern residential construction.
                   </p>
                   <div className="space-y-4 mb-8">

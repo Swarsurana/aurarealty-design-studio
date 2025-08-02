@@ -63,9 +63,10 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Auranex Realty is a premier construction company dedicated to executing architectural visions 
-                  with precision and excellence. Our mission is to create spaces that the city has never seen before, 
-                  delivered through expert project management and uncompromising quality standards.
+                  Auranex Realty is a premier construction company founded by Swaraj Surana and Poonamchand Surana, 
+                  dedicated to executing architectural visions with precision and excellence. Our mission is to create 
+                  spaces that the city has never seen before, delivered through expert project management and 
+                  uncompromising quality standards.
                 </p>
                 <p>
                   With a deep commitment to construction excellence, transparency, and putting people first, 

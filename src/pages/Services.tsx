@@ -122,7 +122,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Boutique Process
+              Our Process
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Every project receives our complete attention through our systematic, quality-focused approach.

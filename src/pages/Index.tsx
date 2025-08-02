@@ -119,13 +119,10 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl gradient-hero shadow-premium p-8 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <img 
-                    src="/lovable-uploads/312ff991-ddfc-4d46-958b-58fdea8391dd.png" 
-                    alt="Auranex Realty Logo" 
-                    className="h-32 w-32 mx-auto mb-6 opacity-90"
-                  />
-                  <h3 className="font-display text-2xl font-bold mb-2">Excellence in Construction</h3>
-                  <p className="text-lg opacity-90">Luxury Delivered</p>
+                  <Building className="h-24 w-24 mx-auto mb-4 opacity-80" />
+                  <h3 className="font-display text-2xl font-bold mb-2">Construction Excellence</h3>
+                  <p className="text-lg opacity-90">Quality Assured</p>
+                  <p className="text-sm opacity-75 mt-2">Upcoming Projects</p>
                 </div>
               </div>
             </div>
@@ -159,21 +156,26 @@ const Index = () => {
               {
                 title: "Land Development & Plotting",
                 description: "Strategic land development and plotting services for residential and commercial projects.",
-                gradient: "gradient-hero"
+                gradient: "gradient-hero",
+                icon: <Building className="h-8 w-8 text-white" />
               },
               {
                 title: "Premium Residential Projects", 
                 description: "Luxury residential construction with premium finishes and modern amenities.",
-                gradient: "gradient-warm"
+                gradient: "gradient-warm",
+                icon: <Users className="h-8 w-8 text-white" />
               },
               {
-                title: "Mixed-Use Developments",
-                description: "Integrated developments combining residential, commercial, and retail spaces.",
-                gradient: "gradient-sunset"
+                title: "Government Contracts",
+                description: "Large-scale infrastructure projects executed with precision and compliance.",
+                gradient: "gradient-sunset",
+                icon: <Award className="h-8 w-8 text-white" />
               }
             ].map((service, index) => (
               <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
-                <div className={`${service.gradient} h-24`}></div>
+                <div className={`${service.gradient} h-24 flex items-center justify-center`}>
+                  {service.icon}
+                </div>
                 <CardContent className="p-6 text-center">
                   <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                     {service.title}
@@ -237,9 +239,9 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
-                <Link to="/projects">
+                <Link to="/services">
                   <Button variant="premium" size="lg" className="group">
-                    View Our Projects
+                    Explore Our Services
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
