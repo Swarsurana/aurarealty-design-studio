@@ -8,46 +8,46 @@ Inspired by architectural elegance, premium materials, and sophisticated craftsm
 
 @layer base {
   :root {
-    /* Core Brand Colors - Elegant cream and navy palette */
-    --background: 33 22% 91%; /* #E9E2D8 */
-    --foreground: 207 70% 20%; /* #082649 */
+    /* Core Brand Colors - Orange-focused luxury palette */
+    --background: 0 0% 100%;
+    --foreground: 25 13% 9%;
 
-    --card: 33 22% 91%;
-    --card-foreground: 207 70% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 13% 9%;
 
-    --popover: 33 22% 91%;
-    --popover-foreground: 207 70% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 13% 9%;
 
-    /* Primary: Deep navy blue from logo */
-    --primary: 207 70% 20%; /* #082649 */
-    --primary-foreground: 33 22% 91%;
-    --primary-light: 207 70% 30%;
-    --primary-dark: 207 70% 15%;
+    /* Primary: Rich warm orange from logo */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 25 95% 63%;
+    --primary-dark: 25 95% 43%;
     
-    /* Secondary: Warm orange for accents */
-    --secondary: 25 95% 53%;
+    /* Secondary: Deep charcoal for sophistication */
+    --secondary: 25 13% 18%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 25 95% 63%;
+    --secondary-light: 25 13% 28%;
 
-    /* Accent: Elegant neutrals */
-    --accent: 32 20% 85%;
-    --accent-foreground: 207 70% 20%;
-    --accent-light: 32 20% 90%;
+    /* Accent: Burnt orange for highlights */
+    --accent: 20 90% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 20 90% 68%;
 
     /* Supporting colors */
     --gold: 45 93% 58%;
     --gold-light: 45 93% 68%;
     
     /* Neutral tones */
-    --muted: 33 22% 96%;
-    --muted-foreground: 207 40% 46%;
+    --muted: 25 13% 96%;
+    --muted-foreground: 25 9% 46%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 33 22% 85%;
-    --input: 33 22% 85%;
-    --ring: 207 70% 20%;
+    --border: 25 13% 91%;
+    --input: 25 13% 91%;
+    --ring: 25 95% 53%;
 
     --radius: 0.75rem;
 
