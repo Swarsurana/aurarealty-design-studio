@@ -88,29 +88,29 @@ const Hero = () => {
         onClick={prevSlide}
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
+        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-white" />
+        <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
       </button>
       
       <button
         onClick={nextSlide}
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
+        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-white" />
+        <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
               index === currentSlide ? "bg-primary" : "bg-white/40"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -132,20 +132,20 @@ const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
             Luxury Rooted in{" "}
             <span className="text-primary drop-shadow-lg">
               Trust
             </span>,{" "}
-            <br />
-            Crafted for the{" "}
+            <br className="hidden sm:block" />
+            <span className="block sm:inline">Crafted for the{" "}</span>
             <span className="text-primary drop-shadow-lg">
               Modern World
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-4">
             Excellence in construction execution, delivered with precision and integrity.
           </p>
 

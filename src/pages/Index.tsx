@@ -64,17 +64,17 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg text-center">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-premium">
                     {feature.icon}
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -116,23 +116,23 @@ const Index = () => {
               </Link>
             </div>
             
-            <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="gradient-hero p-6 text-white text-center border-0">
-                  <Users className="h-12 w-12 mx-auto mb-3 opacity-90" />
-                  <h4 className="font-semibold">Client-Focused</h4>
-                  <p className="text-sm opacity-80">Your vision, our execution</p>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Card className="gradient-hero p-4 sm:p-6 text-white text-center border-0">
+                  <Users className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-3 opacity-90" />
+                  <h4 className="font-semibold text-sm sm:text-base">Client-Focused</h4>
+                  <p className="text-xs sm:text-sm opacity-80">Your vision, our execution</p>
                 </Card>
-                <Card className="gradient-warm p-6 text-white text-center border-0">
-                  <Award className="h-12 w-12 mx-auto mb-3 opacity-90" />
-                  <h4 className="font-semibold">Quality First</h4>
-                  <p className="text-sm opacity-80">Premium standards always</p>
+                <Card className="gradient-warm p-4 sm:p-6 text-white text-center border-0">
+                  <Award className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-3 opacity-90" />
+                  <h4 className="font-semibold text-sm sm:text-base">Quality First</h4>
+                  <p className="text-xs sm:text-sm opacity-80">Premium standards always</p>
                 </Card>
               </div>
-              <Card className="gradient-sophisticated p-6 text-white text-center border-0">
-                <Sparkles className="h-12 w-12 mx-auto mb-3 opacity-90" />
-                <h4 className="font-semibold mb-2">Our Process</h4>
-                <p className="text-sm opacity-90">Transparency, precision, and excellence in every step</p>
+              <Card className="gradient-sophisticated p-4 sm:p-6 text-white text-center border-0">
+                <Sparkles className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-3 opacity-90" />
+                <h4 className="font-semibold text-sm sm:text-base mb-2">Our Process</h4>
+                <p className="text-xs sm:text-sm opacity-90">Transparency, precision, and excellence in every step</p>
               </Card>
             </div>
           </div>
@@ -160,36 +160,36 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: "Land Development & Plotting",
                 description: "Strategic land development and plotting services for residential and commercial projects.",
                 gradient: "gradient-hero",
-                icon: <Building className="h-8 w-8 text-white" />
+                icon: <Building className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               },
               {
                 title: "Premium Residential Projects", 
                 description: "Luxury residential construction with premium finishes and modern amenities.",
                 gradient: "gradient-warm",
-                icon: <Users className="h-8 w-8 text-white" />
+                icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               },
               {
                 title: "Government Contracts",
                 description: "Large-scale infrastructure projects executed with precision and compliance.",
                 gradient: "gradient-sunset",
-                icon: <Award className="h-8 w-8 text-white" />
+                icon: <Award className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               }
             ].map((service, index) => (
               <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
-                <div className={`${service.gradient} h-24 flex items-center justify-center`}>
+                <div className={`${service.gradient} h-16 sm:h-24 flex items-center justify-center`}>
                   {service.icon}
                 </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                <CardContent className="p-4 sm:p-6 text-center">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>
@@ -211,16 +211,16 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-elegant">
-                <CardContent className="p-8">
-                  <blockquote className="text-lg text-muted-foreground italic mb-6 leading-relaxed">
+                <CardContent className="p-4 sm:p-8">
+                  <blockquote className="text-base sm:text-lg text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">{testimonial.author}</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -233,25 +233,25 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="gradient-sophisticated text-white shadow-premium border-0">
-            <CardContent className="p-12 text-center">
-              <h2 className="font-display text-3xl sm:text-4xl font-bold mb-6">
+            <CardContent className="p-6 sm:p-8 lg:p-12 text-center">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
                 Ready to Build Your Dream?
               </h2>
-              <p className="text-xl opacity-95 mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg lg:text-xl opacity-95 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                 Let's transform your vision into an architectural masterpiece. 
                 Get started with a free consultation today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="warm" size="lg" className="group">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button variant="warm" size="lg" className="group w-full sm:w-auto">
                     Get Free Consultation
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
-                <Link to="/services">
-                  <Button variant="premium" size="lg" className="group">
+                <Link to="/services" className="w-full sm:w-auto">
+                  <Button variant="premium" size="lg" className="group w-full sm:w-auto">
                     Explore Our Services
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
               </div>
