@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Ruler, ArrowRight, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   // Currently no active projects - all upcoming opportunities
@@ -36,10 +37,12 @@ const Projects = () => {
               Explore our collection of architectural masterpieces that showcase innovation, 
               luxury, and exceptional craftsmanship.
             </p>
-            <Button variant="premium" size="lg" className="group">
-              View All Projects
-              <Eye className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
-            </Button>
+            <Link to="/contact">
+              <Button variant="premium" size="lg" className="group">
+                Start Your Project
+                <Eye className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -83,14 +86,18 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                    <Button variant="warm" size="lg" className="group">
-                      Book Your New Project
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                    <Button variant="outline" size="lg" className="group border-white/30 text-white hover:bg-white/20">
-                      Contact Us Today
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                    <Link to="/contact">
+                      <Button variant="warm" size="lg" className="group">
+                        Book Your New Project
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button variant="outline" size="lg" className="group border-white/30 text-white hover:bg-white/20">
+                        Contact Us Today
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>
@@ -164,10 +171,12 @@ const Projects = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's discuss how we can bring your vision to life with the same excellence and attention to detail.
           </p>
-          <Button variant="premium" size="lg" className="group">
-            Start Your Project Today
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link to="/contact">
+            <Button variant="premium" size="lg" className="group">
+              Start Your Project Today
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </section>
       <Footer />

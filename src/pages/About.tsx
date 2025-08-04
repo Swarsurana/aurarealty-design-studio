@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, Award, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const values = [
@@ -78,9 +79,11 @@ const About = () => {
                 </p>
               </div>
               <div className="mt-8">
-                <Button variant="premium" size="lg">
-                  Discover Our Process
-                </Button>
+                <Link to="/contact">
+                  <Button variant="premium" size="lg">
+                    Get Free Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
             

@@ -108,9 +108,9 @@ const Index = () => {
                   to precision, integrity, and putting our clients' dreams first.
                 </p>
               </div>
-              <Link to="/about">
+              <Link to="/contact">
                 <Button variant="premium" size="lg" className="group">
-                  Learn Our Story
+                  Get Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
@@ -152,9 +152,9 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               From residential luxury to commercial excellence, we deliver end-to-end construction services.
             </p>
-            <Link to="/services">
+            <Link to="/contact">
               <Button variant="premium" size="lg" className="group">
-                Explore Our Services
+                Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -248,9 +248,9 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
-                <Link to="/services" className="w-full sm:w-auto">
+                <Link to="/contact" className="w-full sm:w-auto">
                   <Button variant="premium" size="lg" className="group w-full sm:w-auto">
-                    Explore Our Services
+                    Book Your Project
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>

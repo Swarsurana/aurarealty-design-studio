@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, Home, Wrench, PenTool, Sparkles, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -65,10 +66,12 @@ const Services = () => {
               From land development to turnkey solutions, we deliver comprehensive construction services 
               that transform concepts into reality through expert execution.
             </p>
-            <Button variant="premium" size="lg" className="group">
-              Explore Our Capabilities
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/contact">
+              <Button variant="premium" size="lg" className="group">
+                Get Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -105,10 +108,12 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <Button variant="outline" className="group">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                    <Link to="/contact">
+                      <Button variant="outline" className="group">
+                        Get Quote
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -176,12 +181,18 @@ const Services = () => {
                 Schedule a consultation with our design experts today.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                {ctaItems.map((cta, index) => (
-                  <Button key={index} variant="warm" size="lg" className="group">
-                    {cta}
+                <Link to="/contact">
+                  <Button variant="warm" size="lg" className="group">
+                    Get Free Consultation
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
-                ))}
+                </Link>
+                <Link to="/contact">
+                  <Button variant="premium" size="lg" className="group">
+                    Book Your Project
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
