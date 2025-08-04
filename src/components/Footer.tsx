@@ -24,8 +24,7 @@ const Footer = () => {
   const socialLinks = [
     { name: "Facebook", icon: <Facebook className="h-5 w-5" />, href: "#" },
     { name: "Instagram", icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/auranex_realty?igsh=MWJtenF4OGdicmcxZw%3D%3D&utm_source=qr" },
-    { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "#" },
-    { name: "Twitter", icon: <Twitter className="h-5 w-5" />, href: "#" },
+    { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/auranex-realty/" },
   ];
 
   return (
@@ -117,10 +116,6 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* CTA */}
-            <Button variant="orange" size="sm" className="w-full" asChild>
-              <Link to="/contact">Get Free Consultation</Link>
-            </Button>
           </div>
         </div>
 
@@ -129,7 +124,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-white/60 text-sm">
-            © 2024 Auranex Realty. All rights reserved.
+            © 2025 Auranex Realty. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-white/60 hover:text-primary transition-colors">

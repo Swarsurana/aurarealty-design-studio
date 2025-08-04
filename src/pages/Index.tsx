@@ -110,7 +110,7 @@ const Index = () => {
               </div>
               <Link to="/contact">
                 <Button variant="premium" size="lg" className="group">
-                  Get Free Consultation
+                  Learn More About Us
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
@@ -152,12 +152,6 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               From residential luxury to commercial excellence, we deliver end-to-end construction services.
             </p>
-            <Link to="/contact">
-              <Button variant="premium" size="lg" className="group">
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -241,17 +235,11 @@ const Index = () => {
                 Let's transform your vision into an architectural masterpiece. 
                 Get started with a free consultation today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <Button variant="warm" size="lg" className="group w-full sm:w-auto">
+              <div className="flex justify-center">
+                <Link to="/contact">
+                  <Button variant="warm" size="lg" className="group">
                     Get Free Consultation
-                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <Button variant="premium" size="lg" className="group w-full sm:w-auto">
-                    Book Your Project
-                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
               </div>
