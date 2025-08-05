@@ -56,10 +56,10 @@ const Index = () => {
             <Badge variant="outline" className="mb-4 text-primary border-primary/20">
               Why Choose Auranex
             </Badge>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary md:text-foreground mb-4">
               The Auranex Difference
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-primary md:text-muted-foreground max-w-2xl mx-auto">
               We don't just build structures – we craft legacies that define luxury and innovation.
             </p>
           </div>
@@ -71,10 +71,10 @@ const Index = () => {
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-premium">
                     {feature.icon}
                   </div>
-                  <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-3">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-primary md:text-foreground mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-primary md:text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -92,13 +92,13 @@ const Index = () => {
               <Badge variant="outline" className="mb-4 text-primary border-primary/20">
                 About Auranex
               </Badge>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary md:text-foreground mb-6">
                 Crafted with Soul,{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Designed to Inspire
                 </span>
               </h2>
-              <div className="space-y-4 text-lg text-muted-foreground mb-8">
+              <div className="space-y-4 text-lg text-primary md:text-muted-foreground mb-8">
                 <p>
                   Auranex Realty represents excellence in construction execution, bringing architectural visions 
                   to life through expert project management and uncompromising quality standards.
@@ -146,10 +146,10 @@ const Index = () => {
             <Badge variant="outline" className="mb-4 text-primary border-primary/20">
               Our Services
             </Badge>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary md:text-foreground mb-4">
               Comprehensive Construction Solutions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-primary md:text-muted-foreground max-w-2xl mx-auto mb-8">
               From residential luxury to commercial excellence, we deliver end-to-end construction services.
             </p>
           </div>
@@ -180,10 +180,10 @@ const Index = () => {
                   {service.icon}
                 </div>
                 <CardContent className="p-4 sm:p-6 text-center">
-                  <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-primary md:text-foreground mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-primary md:text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>
@@ -200,7 +200,7 @@ const Index = () => {
             <Badge variant="outline" className="mb-4 text-primary border-primary/20">
               Client Testimonials
             </Badge>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary md:text-foreground mb-4">
               What Our Clients Say
             </h2>
           </div>
@@ -209,12 +209,12 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-elegant">
                 <CardContent className="p-4 sm:p-8">
-                  <blockquote className="text-base sm:text-lg text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
+                  <blockquote className="text-base sm:text-lg text-primary md:text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div>
-                    <div className="font-semibold text-foreground text-sm sm:text-base">{testimonial.author}</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="font-semibold text-primary md:text-foreground text-sm sm:text-base">{testimonial.author}</div>
+                    <div className="text-xs sm:text-sm text-primary md:text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
               </Card>
