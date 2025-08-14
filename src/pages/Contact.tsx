@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
-      details: "assasinatorswar@gmail.com",
+      details: "auranexrealty@gmail.com",
       description: "Send us your project details"
     },
     {

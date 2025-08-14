@@ -74,7 +74,7 @@ const Index = () => {
                   <h3 className="font-display text-lg sm:text-xl font-semibold text-primary md:text-foreground mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-white md:text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 md:text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -183,7 +183,7 @@ const Index = () => {
                   <h3 className="font-display text-lg sm:text-xl font-semibold text-primary md:text-foreground mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-white md:text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 md:text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>
@@ -209,12 +209,12 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-elegant">
                 <CardContent className="p-4 sm:p-8">
-                  <blockquote className="text-base sm:text-lg text-white md:text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
+                  <blockquote className="text-base sm:text-lg text-gray-700 md:text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div>
                     <div className="font-semibold text-primary md:text-foreground text-sm sm:text-base">{testimonial.author}</div>
-                    <div className="text-xs sm:text-sm text-white md:text-muted-foreground">{testimonial.role}</div>
+                    <div className="text-xs sm:text-sm text-gray-600 md:text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
               </Card>
