@@ -2,10 +2,35 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    projectType: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log("Form submitted:", formData);
+  };
+
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
@@ -33,6 +58,14 @@ const Contact = () => {
     }
   ];
 
+  const projectTypes = [
+    "Residential Construction",
+    "Commercial Development", 
+    "Luxury Villa",
+    "Renovation Project",
+    "Architectural Consultation",
+    "Other"
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -83,23 +116,83 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="w-full">
-                    <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform?embedded=true"
-                      width="100%"
-                      height="800"
-                      frameBorder="0"
-                      marginHeight={0}
-                      marginWidth={0}
-                      className="rounded-lg"
-                      title="Contact Form"
-                    >
-                      Loading…
-                    </iframe>
-                    <p className="text-sm text-muted-foreground mt-4 text-center">
-                      Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Open in new tab</a>
-                    </p>
-                  </div>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="name">Full Name *</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Enter your full name"
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="email">Email Address *</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="your.email@example.com"
+                          required
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="+91 XXXXX XXXXX"
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="projectType">Project Type</Label>
+                        <select
+                          id="projectType"
+                          name="projectType"
+                          value={formData.projectType}
+                          onChange={(e) => setFormData({...formData, projectType: e.target.value})}
+                          className="mt-1 w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        >
+                          <option value="">Select project type</option>
+                          {projectTypes.map((type) => (
+                            <option key={type} value={type}>{type}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="message">Project Details *</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Tell us about your project vision, timeline, budget range, and any specific requirements..."
+                        rows={6}
+                        required
+                        className="mt-1"
+                      />
+                    </div>
+
+                    <Button type="submit" variant="premium" size="lg" className="w-full group">
+                      Send Project Inquiry
+                      <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
             </div>
