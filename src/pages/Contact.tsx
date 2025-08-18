@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,18 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
 
 const Contact = () => {
-  useEffect(() => {
-    // Scroll to form when page loads (with a slight delay to ensure page is rendered)
-    const timer = setTimeout(() => {
-      const formElement = document.getElementById('contact-form');
-      if (formElement) {
-        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
@@ -88,7 +75,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Card id="contact-form" className="shadow-elegant border-0">
+              <Card className="shadow-elegant border-0">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <MessageSquare className="h-5 w-5 text-primary" />
