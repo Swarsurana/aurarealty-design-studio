@@ -85,7 +85,7 @@ const Contact = () => {
                 <CardContent>
                   <div className="w-full">
                     <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLSdDKzHJc8mX4Y6vKnJ2pT9qB5wR7fG1hE3cA8xZ9jS4uM6vL/viewform?embedded=true"
+                      src="https://docs.google.com/forms/d/e/1DACAspfKgjkmnc1yTKpDjjSXMJfier1LwwuaZ6i7Jhc/viewform?embedded=true"
                       width="100%"
                       height="800"
                       frameBorder="0"
@@ -97,7 +97,7 @@ const Contact = () => {
                       Loading…
                     </iframe>
                     <p className="text-sm text-muted-foreground mt-4 text-center">
-                      Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDKzHJc8mX4Y6vKnJ2pT9qB5wR7fG1hE3cA8xZ9jS4uM6vL/viewform" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Open in new tab</a>
+                      Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1DACAspfKgjkmnc1yTKpDjjSXMJfier1LwwuaZ6i7Jhc/viewform" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Open in new tab</a>
                     </p>
                   </div>
                 </CardContent>
