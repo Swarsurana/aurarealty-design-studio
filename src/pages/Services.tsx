@@ -149,30 +149,23 @@ const Services = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
-                  <Button 
-                    variant="warm" 
-                    size="lg" 
-                    className="group"
-                    onClick={() => {
-                      setTimeout(() => {
-                        const formElement = document.getElementById('contact-form');
-                        if (formElement) {
-                          formElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                          });
-                        }
-                      }, 100);
-                    }}
-                  >
+                  <Button variant="warm" size="lg" className="group" onClick={() => {
+                  setTimeout(() => {
+                    const formElement = document.getElementById('contact-form');
+                    if (formElement) {
+                      formElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }
+                  }, 100);
+                }}>
                     Get Quote Now
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
                 <Link to="/projects">
-                  <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                    View Our Work
-                  </Button>
+                  
                 </Link>
               </div>
             </CardContent>
