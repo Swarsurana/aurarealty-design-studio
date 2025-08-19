@@ -5,48 +5,34 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, Home, Wrench, PenTool, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Services = () => {
-  const services = [
-    {
-      icon: <Building className="h-12 w-12" />,
-      title: "Land Development & Plotting",
-      description: "Strategic land development and plotting services for residential and commercial projects with proper infrastructure.",
-      features: ["Site Planning", "Infrastructure Development", "Utility Installation", "Road Construction"],
-      gradient: "gradient-hero"
-    },
-    {
-      icon: <Home className="h-12 w-12" />,
-      title: "Premium Residential & Mixed-Use Developments",
-      description: "Luxury residential construction and mixed-use developments that combine living, retail, and office spaces.",
-      features: ["Luxury Apartments", "Mixed-Use Complexes", "Premium Amenities", "Smart Infrastructure"],
-      gradient: "gradient-warm"
-    },
-    {
-      icon: <Wrench className="h-12 w-12" />,
-      title: "Government Contracts & Infrastructure",
-      description: "Large-scale infrastructure projects and government contracts executed with precision and compliance.",
-      features: ["Public Infrastructure", "Road Construction", "Municipal Projects", "Compliance Management"],
-      gradient: "gradient-sunset"
-    },
-    {
-      icon: <Sparkles className="h-12 w-12" />,
-      title: "Turnkey Solutions",
-      description: "Complete end-to-end construction solutions from planning to handover with full project management.",
-      features: ["Complete Project Management", "Quality Assurance", "Timely Delivery", "Post-Construction Support"],
-      gradient: "gradient-sophisticated"
-    }
-  ];
-
-  const ctaItems = [
-    "Start Your Dream Project",
-    "Get a Free Consultation", 
-    "View Our Signature Projects",
-    "Discover the Auranex Difference"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const services = [{
+    icon: <Building className="h-12 w-12" />,
+    title: "Land Development & Plotting",
+    description: "Strategic land development and plotting services for residential and commercial projects with proper infrastructure.",
+    features: ["Site Planning", "Infrastructure Development", "Utility Installation", "Road Construction"],
+    gradient: "gradient-hero"
+  }, {
+    icon: <Home className="h-12 w-12" />,
+    title: "Premium Residential & Mixed-Use Developments",
+    description: "Luxury residential construction and mixed-use developments that combine living, retail, and office spaces.",
+    features: ["Luxury Apartments", "Mixed-Use Complexes", "Premium Amenities", "Smart Infrastructure"],
+    gradient: "gradient-warm"
+  }, {
+    icon: <Wrench className="h-12 w-12" />,
+    title: "Government Contracts & Infrastructure",
+    description: "Large-scale infrastructure projects and government contracts executed with precision and compliance.",
+    features: ["Public Infrastructure", "Road Construction", "Municipal Projects", "Compliance Management"],
+    gradient: "gradient-sunset"
+  }, {
+    icon: <Sparkles className="h-12 w-12" />,
+    title: "Turnkey Solutions",
+    description: "Complete end-to-end construction solutions from planning to handover with full project management.",
+    features: ["Complete Project Management", "Quality Assurance", "Timely Delivery", "Post-Construction Support"],
+    gradient: "gradient-sophisticated"
+  }];
+  const ctaItems = ["Start Your Dream Project", "Get a Free Consultation", "View Our Signature Projects", "Discover the Auranex Difference"];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -67,10 +53,7 @@ const Services = () => {
               that transform concepts into reality through expert execution.
             </p>
             <Link to="/contact">
-              <Button variant="premium" size="lg" className="group">
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              
             </Link>
           </div>
         </div>
@@ -80,8 +63,7 @@ const Services = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
+            {services.map((service, index) => <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
                 <CardHeader className={`${service.gradient} text-white p-8`}>
                   <div className="flex items-center space-x-4">
                     <div className="group-hover:scale-110 transition-premium">
@@ -99,12 +81,10 @@ const Services = () => {
                   <div className="space-y-3">
                     <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2">
+                      {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-primary rounded-full"></div>
                           <span className="text-sm text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
                   <div className="mt-6">
@@ -116,8 +96,7 @@ const Services = () => {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -135,24 +114,19 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Listen & Plan",
-                description: "We understand your requirements and develop comprehensive execution plans."
-              },
-              {
-                step: "02", 
-                title: "Execute & Monitor",
-                description: "Our expert teams execute projects with continuous quality monitoring and progress tracking."
-              },
-              {
-                step: "03",
-                title: "Deliver & Support",
-                description: "Quality construction delivered on time with comprehensive post-completion support."
-              }
-            ].map((process, index) => (
-              <div key={index} className="text-center">
+            {[{
+            step: "01",
+            title: "Listen & Plan",
+            description: "We understand your requirements and develop comprehensive execution plans."
+          }, {
+            step: "02",
+            title: "Execute & Monitor",
+            description: "Our expert teams execute projects with continuous quality monitoring and progress tracking."
+          }, {
+            step: "03",
+            title: "Deliver & Support",
+            description: "Quality construction delivered on time with comprehensive post-completion support."
+          }].map((process, index) => <div key={index} className="text-center">
                 <div className="w-16 h-16 gradient-hero rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-6 shadow-premium">
                   {process.step}
                 </div>
@@ -162,8 +136,7 @@ const Services = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {process.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -188,10 +161,7 @@ const Services = () => {
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="premium" size="lg" className="group">
-                    Book Your Project
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
+                  
                 </Link>
               </div>
             </CardContent>
@@ -199,8 +169,6 @@ const Services = () => {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
