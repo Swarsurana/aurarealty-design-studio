@@ -5,33 +5,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, Award, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  const values = [
-    {
-      icon: <Users className="h-8 w-8 text-primary" />,
-      title: "People-First Philosophy",
-      description: "We listen before we build, ensuring every project reflects our clients' dreams and aspirations."
-    },
-    {
-      icon: <Target className="h-8 w-8 text-secondary" />,
-      title: "Unmatched Attention to Detail",
-      description: "From blueprint to brick, every element is crafted with precision and purpose."
-    },
-    {
-      icon: <Award className="h-8 w-8 text-accent" />,
-      title: "Design-Forward Thinking",
-      description: "Breaking norms and setting trends in architectural innovation and luxury construction."
-    },
-    {
-      icon: <Heart className="h-8 w-8 text-primary" />,
-      title: "Transparency & Trust",
-      description: "No hidden costs, no guesswork - just honest communication and exceptional results."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const values = [{
+    icon: <Users className="h-8 w-8 text-primary" />,
+    title: "People-First Philosophy",
+    description: "We listen before we build, ensuring every project reflects our clients' dreams and aspirations."
+  }, {
+    icon: <Target className="h-8 w-8 text-secondary" />,
+    title: "Unmatched Attention to Detail",
+    description: "From blueprint to brick, every element is crafted with precision and purpose."
+  }, {
+    icon: <Award className="h-8 w-8 text-accent" />,
+    title: "Design-Forward Thinking",
+    description: "Breaking norms and setting trends in architectural innovation and luxury construction."
+  }, {
+    icon: <Heart className="h-8 w-8 text-primary" />,
+    title: "Transparency & Trust",
+    description: "No hidden costs, no guesswork - just honest communication and exceptional results."
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -43,9 +35,7 @@ const About = () => {
             </Badge>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               A Vision Brought to{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Life
-              </span>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950"></span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               More than construction - we're architects of dreams, builders of tomorrow.
@@ -69,33 +59,20 @@ const About = () => {
                   spaces that the city has never seen before, delivered through expert project management and 
                   uncompromising quality standards.
                 </p>
-                <p>
-                  With a deep commitment to construction excellence, transparency, and putting people first, 
-                  every project we undertake becomes a landmark of purpose and quality. We don't just execute 
-                  construction; we craft legacies.
-                </p>
+                <p>With a deep commitment to construction excellence, transparency, and putting people first, every project we undertake becomes a landmark of purpose and quality. We don't just execute construction; we craft legacies.</p>
                 <p className="text-primary font-medium">
                   "Luxury rooted in trust, crafted for the modern world."
                 </p>
               </div>
               <div className="mt-8">
                 <Link to="/contact">
-                  <Button variant="premium" size="lg">
-                    Get Free Consultation
-                  </Button>
+                  
                 </Link>
               </div>
             </div>
             
             <div className="relative">
-              <div className="aspect-square rounded-2xl gradient-hero shadow-premium p-8 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <Users className="h-24 w-24 mx-auto mb-4 opacity-80" />
-                  <h3 className="font-display text-2xl font-bold mb-2">Excellence in Execution</h3>
-                  <p className="text-lg opacity-90">Construction Leadership</p>
-                  <p className="text-sm opacity-75 mt-2">Quality Assured</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -114,8 +91,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg">
+            {values.map((value, index) => <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg">
                 <CardContent className="p-6 text-center">
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-premium">
                     {value.icon}
@@ -127,8 +103,7 @@ const About = () => {
                     {value.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -152,8 +127,6 @@ const About = () => {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
