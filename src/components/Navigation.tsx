@@ -48,8 +48,21 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="premium" size="sm" asChild>
-              <Link to="/contact">Get Consultation</Link>
+            <Button 
+              variant="premium" 
+              size="sm" 
+              onClick={() => {
+                if (location.pathname === '/contact') {
+                  const formElement = document.getElementById('contact-form');
+                  if (formElement) {
+                    formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
+            >
+              Get Consultation
             </Button>
           </div>
 
@@ -85,8 +98,22 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="premium" className="w-full" asChild>
-                  <Link to="/contact">Get Consultation</Link>
+                <Button 
+                  variant="premium" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsOpen(false);
+                    if (location.pathname === '/contact') {
+                      const formElement = document.getElementById('contact-form');
+                      if (formElement) {
+                        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    } else {
+                      window.location.href = '/contact';
+                    }
+                  }}
+                >
+                  Get Consultation
                 </Button>
               </div>
             </div>
