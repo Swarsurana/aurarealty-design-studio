@@ -28,7 +28,7 @@ const Projects = () => {
             </Badge>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Signature{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950">
                 Projects
               </span>
             </h1>
