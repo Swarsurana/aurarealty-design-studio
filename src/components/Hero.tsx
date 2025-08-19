@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight, Play } from "lucide-react";
 import construction1 from "@/assets/construction-1.webp";
-import construction2 from "@/assets/construction-2.webp";
+import construction2 from "@/assets/construction-2-new.webp";
 import construction3 from "@/assets/construction-3.webp";
 import construction4 from "@/assets/construction-4.webp";
 import construction5 from "@/assets/construction-5.webp";

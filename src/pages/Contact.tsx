@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
 
 const Contact = () => {
+  useScrollToTop();
   useEffect(() => {
     // Scroll to form when page loads (with a slight delay to ensure page is rendered)
     const timer = setTimeout(() => {

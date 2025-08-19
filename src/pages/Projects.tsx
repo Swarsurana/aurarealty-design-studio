@@ -5,7 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Ruler, ArrowRight, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 const Projects = () => {
+  useScrollToTop();
   // Currently no active projects - all upcoming opportunities
 
   const getStatusBadge = (status: string): "default" | "destructive" | "outline" | "secondary" => {
@@ -63,7 +65,7 @@ const Projects = () => {
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-3 gap-4 text-center">
                     <div className="bg-white/10 rounded-lg p-4">
-                      <MapPin className="h-8 w-8 mx-auto mb-2 text-secondary" />
+                      <MapPin className="h-8 w-8 mx-auto mb-2 text-primary" />
                       <h3 className="font-semibold mb-1">Any Location</h3>
                       <p className="text-sm opacity-80">We work across regions</p>
                     </div>
@@ -117,7 +119,7 @@ const Projects = () => {
           }, {
             title: "Commercial Complexes",
             description: "Modern office spaces and retail developments",
-            icon: <Ruler className="h-8 w-8 text-secondary" />
+            icon: <Ruler className="h-8 w-8 text-primary" />
           }, {
             title: "Infrastructure Projects",
             description: "Government contracts and public infrastructure",
@@ -154,7 +156,7 @@ const Projects = () => {
           </p>
           <Link to="/contact">
             <Button variant="premium" size="lg" className="group">
-              Start Your Project Today
+              Inquire Now
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>

@@ -6,8 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Building, Users, Award, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const Index = () => {
+  useScrollToTop();
   const features = [
     {
       icon: <Building className="h-8 w-8 text-primary" />,
@@ -15,7 +17,7 @@ const Index = () => {
       description: "Architectural excellence that breaks norms and sets new standards for luxury construction."
     },
     {
-      icon: <Users className="h-8 w-8 text-secondary" />,
+      icon: <Users className="h-8 w-8 text-primary" />,
       title: "People-First Approach",
       description: "We listen before we build, ensuring every project reflects our clients' dreams."
     },
@@ -108,7 +110,7 @@ const Index = () => {
                   to precision, integrity, and putting our clients' dreams first.
                 </p>
               </div>
-              <Link to="/contact">
+              <Link to="/about">
                 <Button variant="premium" size="lg" className="group">
                   Learn More About Us
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

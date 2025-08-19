@@ -5,13 +5,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, Award, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 const About = () => {
+  useScrollToTop();
   const values = [{
     icon: <Users className="h-8 w-8 text-primary" />,
     title: "People-First Philosophy",
     description: "We listen before we build, ensuring every project reflects our clients' dreams and aspirations."
   }, {
-    icon: <Target className="h-8 w-8 text-secondary" />,
+    icon: <Target className="h-8 w-8 text-primary" />,
     title: "Unmatched Attention to Detail",
     description: "From blueprint to brick, every element is crafted with precision and purpose."
   }, {
@@ -35,7 +37,9 @@ const About = () => {
             </Badge>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               A Vision Brought to{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950"></span>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Life
+              </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               More than construction - we're architects of dreams, builders of tomorrow.
@@ -59,7 +63,8 @@ const About = () => {
                   spaces that the city has never seen before, delivered through expert project management and 
                   uncompromising quality standards.
                 </p>
-                <p>With a deep commitment to construction excellence, transparency, and putting people first, every project we undertake becomes a landmark of purpose and quality. We don't just execute construction; we craft legacies.</p>
+                <p>With a deep commitment to construction excellence, transparency, and putting people first, every project we undertake becomes a landmark of purpose and quality. We don't just execute construction; we craft legacies that stand the test of time and define excellence in the built environment.</p>
+                <p>Our approach combines traditional craftsmanship with modern innovation, ensuring every project we deliver exceeds expectations and creates lasting value for our clients and communities. From initial concept to final handover, we maintain the highest standards of quality, safety, and sustainability.</p>
                 <p className="text-primary font-medium">
                   "Luxury rooted in trust, crafted for the modern world."
                 </p>

@@ -5,12 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, Home, Wrench, PenTool, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 const Services = () => {
+  useScrollToTop();
   const services = [{
     icon: <Building className="h-12 w-12" />,
     title: "Land Development & Plotting",
     description: "Strategic land development and plotting services for residential and commercial projects with proper infrastructure.",
-    features: ["Site Planning", "Infrastructure Development", "Utility Installation", "Road Construction"],
+    features: ["Site Planning", "Infrastructure Development", "Utility Installation", "Land Plotting"],
     gradient: "gradient-hero"
   }, {
     icon: <Home className="h-12 w-12" />,

@@ -16,7 +16,7 @@ const Footer = () => {
     name: "Projects",
     href: "/projects"
   }, {
-    name: "Contact",
+    name: "Contact Us",
     href: "/contact"
   }];
   const services = ["Land Development & Plotting", "Premium Residential Projects", "Mixed-Use Developments", "Government Contracts", "Infrastructure Projects", "Turnkey Solutions"];
@@ -65,20 +65,19 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <div>
-            <h3 className="font-display text-lg font-semibold text-white mb-6">Quick Links</h3>
+            <h3 className="font-display text-lg font-semibold text-white mb-6">Our Services</h3>
             <ul className="space-y-3">
-              {quickLinks.map(link => <li key={link.name}>
-                  <Link to={link.href} className="text-white/70 hover:text-primary transition-colors hover:underline">
-                    {link.name}
-                  </Link>
-                </li>)}
+              {services.map(service => (
+                <li key={service}>
+                  <span className="text-white/70 text-sm">
+                    {service}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
-
-          {/* Services */}
-          
 
           {/* Contact & Social */}
           <div>
@@ -87,9 +86,47 @@ const Footer = () => {
               Follow us on social media for the latest updates on our projects and construction insights.
             </p>
             
-            {/* Social Links */}
+            <div className="flex space-x-4 mb-6">
+              <a
+                href="https://www.instagram.com/auranex_realty/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/20 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/posts/auranex-realty_auranexrealty-skylinenext-builddifferent-activity-7338427934510075907-9INP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0IJJsBjXCbB25ropVjJmsbxGzR80cgZsg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
             
+            <div className="space-y-3 text-sm text-white/70">
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>+91 8530253991</span>
+              </div>
+            </div>
+          </div>
 
+          {/* Quick Links - moved to far right */}
+          <div>
+            <h3 className="font-display text-lg font-semibold text-white mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-white/70 hover:text-primary transition-colors hover:underline">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
