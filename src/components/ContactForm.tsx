@@ -106,7 +106,13 @@ const ContactForm = () => {
               name="phone"
               type="tel"
               value={formData.phone}
-              onChange={handleChange}
+              onChange={(e) => {
+                const value = e.target.value;
+                // Only allow numbers, +, -, (, ), and spaces
+                if (/^[0-9+\-() ]*$/.test(value)) {
+                  handleChange(e);
+                }
+              }}
               required
               placeholder="Enter your phone number"
               className="mt-1"
