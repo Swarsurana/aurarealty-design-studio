@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
-
 const Contact = () => {
   useScrollToTop();
   useEffect(() => {
@@ -14,43 +13,36 @@ const Contact = () => {
     const timer = setTimeout(() => {
       const formElement = document.getElementById('contact-form');
       if (formElement) {
-        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        formElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     }, 100);
-    
     return () => clearTimeout(timer);
   }, []);
-
-  const contactInfo = [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: "Email Us",
-      details: "auranexrealty@gmail.com",
-      description: "Send us your project details"
-    },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Call Us",
-      details: "+91 8530253991",
-      description: "Speak with our consultants"
-    },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Visit Us",
-      details: "Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar",
-      description: "Schedule an office visit"
-    },
-    {
-      icon: <Clock className="h-6 w-6" />,
-      title: "Business Hours",
-      details: "Mon - Sat: 9:00 AM - 6:00 PM",
-      description: "We're here to help"
-    }
-  ];
-
-
-  return (
-    <div className="min-h-screen bg-background">
+  const contactInfo = [{
+    icon: <Mail className="h-6 w-6" />,
+    title: "Email Us",
+    details: "auranexrealty@gmail.com",
+    description: "Send us your project details"
+  }, {
+    icon: <Phone className="h-6 w-6" />,
+    title: "Call Us",
+    details: "+91 8530253991",
+    description: "Speak with our consultants"
+  }, {
+    icon: <MapPin className="h-6 w-6" />,
+    title: "Visit Us",
+    details: "Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar",
+    description: "Schedule an office visit"
+  }, {
+    icon: <Clock className="h-6 w-6" />,
+    title: "Business Hours",
+    details: "Mon - Sat: 9:00 AM - 6:00 PM",
+    description: "We're here to help"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -62,7 +54,7 @@ const Contact = () => {
             </Badge>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Let's Build Something{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950">
                 Extraordinary
               </span>
             </h1>
@@ -99,16 +91,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="w-full">
-                    <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform?embedded=true"
-                      width="100%"
-                      height="800"
-                      frameBorder="0"
-                      marginHeight={0}
-                      marginWidth={0}
-                      className="rounded-lg"
-                      title="Contact Form"
-                    >
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform?embedded=true" width="100%" height="800" frameBorder="0" marginHeight={0} marginWidth={0} className="rounded-lg" title="Contact Form">
                       Loading…
                     </iframe>
                     <p className="text-sm text-muted-foreground mt-4 text-center">
@@ -132,8 +115,7 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg">
+                {contactInfo.map((info, index) => <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0 p-3 gradient-hero rounded-lg text-white group-hover:scale-110 transition-premium">
@@ -152,8 +134,7 @@ const Contact = () => {
                         </div>
                       </div>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               {/* CTA Cards */}
@@ -190,33 +171,25 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                question: "What is the typical project timeline?",
-                answer: "Project timelines vary based on scope, but residential projects typically take 6-12 months, while commercial projects may take 12-18 months."
-              },
-              {
-                question: "Do you provide design services?",
-                answer: "Yes, we offer comprehensive architectural design and consultation services as part of our full-service construction approach."
-              },
-              {
-                question: "What areas do you serve?",
-                answer: "We primarily serve Chh. Sambhajinagar and surrounding areas, with selective projects in other major cities."
-              },
-              {
-                question: "Do you handle permits and approvals?",
-                answer: "Absolutely. We manage all necessary permits, approvals, and regulatory compliance as part of our project management service."
-              },
-              {
-                question: "What is your pricing structure?",
-                answer: "Our pricing is competitive and transparent. We provide detailed quotes based on project scope, materials, and timeline. Contact us for a personalized estimate."
-              },
-              {
-                question: "Do you offer maintenance services?",
-                answer: "Yes, we provide post-construction maintenance and support services to ensure your property remains in excellent condition for years to come."
-              }
-            ].map((faq, index) => (
-              <Card key={index} className="border-0 shadow-lg">
+            {[{
+            question: "What is the typical project timeline?",
+            answer: "Project timelines vary based on scope, but residential projects typically take 6-12 months, while commercial projects may take 12-18 months."
+          }, {
+            question: "Do you provide design services?",
+            answer: "Yes, we offer comprehensive architectural design and consultation services as part of our full-service construction approach."
+          }, {
+            question: "What areas do you serve?",
+            answer: "We primarily serve Chh. Sambhajinagar and surrounding areas, with selective projects in other major cities."
+          }, {
+            question: "Do you handle permits and approvals?",
+            answer: "Absolutely. We manage all necessary permits, approvals, and regulatory compliance as part of our project management service."
+          }, {
+            question: "What is your pricing structure?",
+            answer: "Our pricing is competitive and transparent. We provide detailed quotes based on project scope, materials, and timeline. Contact us for a personalized estimate."
+          }, {
+            question: "Do you offer maintenance services?",
+            answer: "Yes, we provide post-construction maintenance and support services to ensure your property remains in excellent condition for years to come."
+          }].map((faq, index) => <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">
                     {faq.question}
@@ -225,14 +198,11 @@ const Contact = () => {
                     {faq.answer}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
