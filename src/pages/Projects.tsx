@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Ruler, ArrowRight, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Projects = () => {
   // Currently no active projects - all upcoming opportunities
 
@@ -15,9 +14,7 @@ const Projects = () => {
     };
     return variants[status] || "outline";
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -38,10 +35,7 @@ const Projects = () => {
               luxury, and exceptional craftsmanship.
             </p>
             <Link to="/contact">
-              <Button variant="premium" size="lg" className="group">
-                Start Your Project
-                <Eye className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              </Button>
+              
             </Link>
           </div>
         </div>
@@ -87,16 +81,10 @@ const Projects = () => {
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                     <Link to="/contact">
-                      <Button variant="warm" size="lg" className="group">
-                        Book Your New Project
-                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                      </Button>
+                      
                     </Link>
                     <Link to="/contact">
-                      <Button variant="outline" size="lg" className="group border-white/30 text-white hover:bg-white/20">
-                        Contact Us Today
-                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                      </Button>
+                      
                     </Link>
                   </div>
                 </div>
@@ -122,29 +110,23 @@ const Projects = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Luxury Residences",
-                description: "Premium residential complexes with world-class amenities",
-                icon: <MapPin className="h-8 w-8 text-primary" />
-              },
-              {
-                title: "Commercial Complexes", 
-                description: "Modern office spaces and retail developments",
-                icon: <Ruler className="h-8 w-8 text-secondary" />
-              },
-              {
-                title: "Infrastructure Projects",
-                description: "Government contracts and public infrastructure",
-                icon: <Calendar className="h-8 w-8 text-accent" />
-              },
-              {
-                title: "Mixed-Use Developments",
-                description: "Integrated living, working, and entertainment spaces",
-                icon: <Eye className="h-8 w-8 text-primary" />
-              }
-            ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg text-center">
+            {[{
+            title: "Luxury Residences",
+            description: "Premium residential complexes with world-class amenities",
+            icon: <MapPin className="h-8 w-8 text-primary" />
+          }, {
+            title: "Commercial Complexes",
+            description: "Modern office spaces and retail developments",
+            icon: <Ruler className="h-8 w-8 text-secondary" />
+          }, {
+            title: "Infrastructure Projects",
+            description: "Government contracts and public infrastructure",
+            icon: <Calendar className="h-8 w-8 text-accent" />
+          }, {
+            title: "Mixed-Use Developments",
+            description: "Integrated living, working, and entertainment spaces",
+            icon: <Eye className="h-8 w-8 text-primary" />
+          }].map((item, index) => <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-premium">
                     {item.icon}
@@ -156,8 +138,7 @@ const Projects = () => {
                     {item.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -180,8 +161,6 @@ const Projects = () => {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Projects;
