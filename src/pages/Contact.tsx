@@ -29,7 +29,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
-      details: "+91 XXX XXX XXXX",
+      details: "+91 8530253991",
       description: "Speak with our consultants"
     },
     {
@@ -156,20 +156,6 @@ const Contact = () => {
 
               {/* CTA Cards */}
               <div className="mt-8 space-y-4">
-                <Card className="gradient-gold text-secondary-foreground shadow-gold border-0">
-                  <CardContent className="p-6 text-center">
-                    <h3 className="font-display text-xl font-bold mb-2">
-                      Free Consultation
-                    </h3>
-                    <p className="mb-4 opacity-90">
-                      Schedule a complimentary project consultation with our experts.
-                    </p>
-                    <Button variant="sophisticated" size="sm">
-                      Book Now
-                    </Button>
-                  </CardContent>
-                </Card>
-
                 <Card className="gradient-sophisticated text-white shadow-elegant border-0">
                   <CardContent className="p-6 text-center">
                     <h3 className="font-display text-xl font-bold mb-2">
@@ -218,6 +204,14 @@ const Contact = () => {
               {
                 question: "Do you handle permits and approvals?",
                 answer: "Absolutely. We manage all necessary permits, approvals, and regulatory compliance as part of our project management service."
+              },
+              {
+                question: "What is your pricing structure?",
+                answer: "Our pricing is competitive and transparent. We provide detailed quotes based on project scope, materials, and timeline. Contact us for a personalized estimate."
+              },
+              {
+                question: "Do you offer maintenance services?",
+                answer: "Yes, we provide post-construction maintenance and support services to ensure your property remains in excellent condition for years to come."
               }
             ].map((faq, index) => (
               <Card key={index} className="border-0 shadow-lg">
