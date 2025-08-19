@@ -7,47 +7,35 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Building, Users, Award, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-
 const Index = () => {
   useScrollToTop();
-  const features = [
-    {
-      icon: <Building className="h-8 w-8 text-primary" />,
-      title: "Visionary Design",
-      description: "Architectural excellence that breaks norms and sets new standards for luxury construction."
-    },
-    {
-      icon: <Users className="h-8 w-8 text-primary" />,
-      title: "People-First Approach",
-      description: "We listen before we build, ensuring every project reflects our clients' dreams."
-    },
-    {
-      icon: <Award className="h-8 w-8 text-accent" />,
-      title: "Our Process",
-      description: "Every project receives our undivided attention and premium craftsmanship."
-    },
-    {
-      icon: <Sparkles className="h-8 w-8 text-primary" />,
-      title: "Luxury Standards",
-      description: "Premium materials, innovative technology, and unmatched attention to detail."
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Auranex transformed our vision into an architectural masterpiece. Their attention to detail is unmatched.",
-      author: "Priya Sharma",
-      role: "Luxury Villa Owner"
-    },
-    {
-      quote: "Our process and transparency throughout the project was exceptional. Highly recommended.",
-      author: "Rajesh Gupta", 
-      role: "Commercial Developer"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const features = [{
+    icon: <Building className="h-8 w-8 text-primary" />,
+    title: "Visionary Design",
+    description: "Architectural excellence that breaks norms and sets new standards for luxury construction."
+  }, {
+    icon: <Users className="h-8 w-8 text-primary" />,
+    title: "People-First Approach",
+    description: "We listen before we build, ensuring every project reflects our clients' dreams."
+  }, {
+    icon: <Award className="h-8 w-8 text-accent" />,
+    title: "Our Process",
+    description: "Every project receives our undivided attention and premium craftsmanship."
+  }, {
+    icon: <Sparkles className="h-8 w-8 text-primary" />,
+    title: "Luxury Standards",
+    description: "Premium materials, innovative technology, and unmatched attention to detail."
+  }];
+  const testimonials = [{
+    quote: "Auranex transformed our vision into an architectural masterpiece. Their attention to detail is unmatched.",
+    author: "Priya Sharma",
+    role: "Luxury Villa Owner"
+  }, {
+    quote: "Our process and transparency throughout the project was exceptional. Highly recommended.",
+    author: "Rajesh Gupta",
+    role: "Commercial Developer"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
       
@@ -67,8 +55,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg text-center">
+            {features.map((feature, index) => <Card key={index} className="group hover:shadow-elegant transition-premium border-0 shadow-lg text-center">
                 <CardContent className="p-4 sm:p-6">
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-premium">
                     {feature.icon}
@@ -80,8 +67,7 @@ const Index = () => {
                     {feature.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -96,7 +82,7 @@ const Index = () => {
               </Badge>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary md:text-foreground mb-6">
                 Crafted with Soul,{" "}
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950">
                   Designed to Inspire
                 </span>
               </h2>
@@ -157,27 +143,22 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                title: "Land Development & Plotting",
-                description: "Strategic land development and plotting services for residential and commercial projects.",
-                gradient: "gradient-hero",
-                icon: <Building className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              },
-              {
-                title: "Premium Residential Projects", 
-                description: "Luxury residential construction with premium finishes and modern amenities.",
-                gradient: "gradient-warm",
-                icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              },
-              {
-                title: "Government Contracts",
-                description: "Large-scale infrastructure projects executed with precision and compliance.",
-                gradient: "gradient-sunset",
-                icon: <Award className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              }
-            ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
+            {[{
+            title: "Land Development & Plotting",
+            description: "Strategic land development and plotting services for residential and commercial projects.",
+            gradient: "gradient-hero",
+            icon: <Building className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+          }, {
+            title: "Premium Residential Projects",
+            description: "Luxury residential construction with premium finishes and modern amenities.",
+            gradient: "gradient-warm",
+            icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+          }, {
+            title: "Government Contracts",
+            description: "Large-scale infrastructure projects executed with precision and compliance.",
+            gradient: "gradient-sunset",
+            icon: <Award className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+          }].map((service, index) => <Card key={index} className="group hover:shadow-premium transition-premium border-0 shadow-lg overflow-hidden">
                 <div className={`${service.gradient} h-16 sm:h-24 flex items-center justify-center`}>
                   {service.icon}
                 </div>
@@ -189,8 +170,7 @@ const Index = () => {
                     {service.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -208,8 +188,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-elegant">
+            {testimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-elegant">
                 <CardContent className="p-4 sm:p-8">
                   <blockquote className="text-base sm:text-lg text-slate-900 md:text-muted-foreground italic mb-4 sm:mb-6 leading-relaxed">
                     "{testimonial.quote}"
@@ -219,8 +198,7 @@ const Index = () => {
                     <div className="text-xs sm:text-sm text-slate-800 md:text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -250,8 +228,6 @@ const Index = () => {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
