@@ -154,7 +154,7 @@ const Projects = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's discuss how we can bring your vision to life with the same excellence and attention to detail.
           </p>
-          <Link to="/contact">
+          <Link to="/contact#contact-form">
             <Button variant="premium" size="lg" className="group">
               Inquire Now
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

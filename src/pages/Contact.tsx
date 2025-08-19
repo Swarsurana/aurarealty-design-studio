@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 const Contact = () => {
   useScrollToTop();
   useEffect(() => {
@@ -35,7 +36,8 @@ const Contact = () => {
     icon: <MapPin className="h-6 w-6" />,
     title: "Visit Us",
     details: "Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar",
-    description: "Schedule an office visit"
+    description: "Schedule an office visit",
+    link: "https://share.google/49bMd1n2X4WXezVb4"
   }, {
     icon: <Clock className="h-6 w-6" />,
     title: "Business Hours",
@@ -82,24 +84,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Card id="contact-form" className="shadow-elegant border-0">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <MessageSquare className="h-5 w-5 text-primary" />
-                    <span>Project Inquiry Form</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="w-full">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform?embedded=true" width="100%" height="800" frameBorder="0" marginHeight={0} marginWidth={0} className="rounded-lg" title="Contact Form">
-                      Loading…
-                    </iframe>
-                    <p className="text-sm text-muted-foreground mt-4 text-center">
-                      Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLScu39etC_HIwKxQAx234RX64VWRLPl6LZv2-KPeLM4iJlmVcg/viewform" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Open in new tab</a>
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
 
             {/* Contact Information */}
@@ -125,9 +110,20 @@ const Contact = () => {
                           <h3 className="font-semibold text-foreground mb-1">
                             {info.title}
                           </h3>
-                          <p className="text-primary font-medium mb-1">
-                            {info.details}
-                          </p>
+                          {info.link ? (
+                            <a 
+                              href={info.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-primary font-medium mb-1 hover:underline block"
+                            >
+                              {info.details}
+                            </a>
+                          ) : (
+                            <p className="text-primary font-medium mb-1">
+                              {info.details}
+                            </p>
+                          )}
                           <p className="text-sm text-muted-foreground">
                             {info.description}
                           </p>
@@ -147,7 +143,19 @@ const Contact = () => {
                     <p className="mb-4 opacity-90">
                       Have a specific project in mind? Let's discuss your requirements.
                     </p>
-                    <Button variant="warm" size="sm">
+                    <Button 
+                      variant="warm" 
+                      size="sm"
+                      onClick={() => {
+                        const formElement = document.getElementById('contact-form');
+                        if (formElement) {
+                          formElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                          });
+                        }
+                      }}
+                    >
                       Inquire Now
                     </Button>
                   </CardContent>
@@ -179,7 +187,7 @@ const Contact = () => {
             answer: "Yes, we offer comprehensive architectural design and consultation services as part of our full-service construction approach."
           }, {
             question: "What areas do you serve?",
-            answer: "We primarily serve Chh. Sambhajinagar and surrounding areas, with selective projects in other major cities."
+            answer: "We serve in all areas and are equipped to handle projects across multiple locations with our expert team and proven project management capabilities."
           }, {
             question: "Do you handle permits and approvals?",
             answer: "Absolutely. We manage all necessary permits, approvals, and regulatory compliance as part of our project management service."

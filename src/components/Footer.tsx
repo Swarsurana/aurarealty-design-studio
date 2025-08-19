@@ -52,7 +52,14 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-white/70">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar</span>
+                <a 
+                  href="https://share.google/49bMd1n2X4WXezVb4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary hover:underline"
+                >
+                  Disha Vaibhav Complex, Aurangapura, Chh. Sambhajinagar
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />

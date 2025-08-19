@@ -31,7 +31,7 @@ const Services = () => {
     title: "Turnkey Solutions",
     description: "Complete end-to-end construction solutions from planning to handover with full project management.",
     features: ["Complete Project Management", "Quality Assurance", "Timely Delivery", "Post-Construction Support"],
-    gradient: "gradient-sophisticated"
+    gradient: "gradient-warm"
   }];
   const ctaItems = ["Start Your Dream Project", "Get a Free Consultation", "View Our Signature Projects", "Discover the Auranex Difference"];
   return <div className="min-h-screen bg-background">
