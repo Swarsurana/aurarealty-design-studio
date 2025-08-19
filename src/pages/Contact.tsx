@@ -76,11 +76,11 @@ const Contact = () => {
             <div>
               <div className="mb-8">
                 <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-                  Start Your Project
+                  Get In Touch
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   Fill out the form below and we'll get back to you within 24 hours 
-                  with a personalized consultation.
+                  with a personalized response to your inquiry.
                 </p>
               </div>
 
@@ -138,10 +138,10 @@ const Contact = () => {
                 <Card className="gradient-sophisticated text-white shadow-elegant border-0">
                   <CardContent className="p-6 text-center">
                     <h3 className="font-display text-xl font-bold mb-2">
-                      Project Inquiry
+                      Contact Form
                     </h3>
                     <p className="mb-4 opacity-90">
-                      Have a specific project in mind? Let's discuss your requirements.
+                      Have a question or want to discuss a project? Send us a message.
                     </p>
                     <Button 
                       variant="warm" 

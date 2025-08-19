@@ -12,9 +12,6 @@ const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
-    projectType: "",
-    budget: "",
-    location: "",
     message: ""
   });
   
@@ -35,32 +32,26 @@ const ContactForm = () => {
       // Submit to Google Apps Script that will write to the sheet
       const response = await fetch('https://script.google.com/macros/s/AKfycbxqJ8k5JlO7YjZeNnMxPOIlv5w3gF2tR9iQsK1BhU0VmW2y/exec', {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({
+        body: new URLSearchParams({
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          projectType: formData.projectType,
-          budget: formData.budget,
-          location: formData.location,
           message: formData.message,
           timestamp: new Date().toISOString()
-        })
+        }).toString()
       });
 
-      toast.success("Thank you! Your inquiry has been submitted successfully. We'll get back to you within 24 hours.");
+      toast.success("Thank you! Your message has been submitted successfully. We'll get back to you within 24 hours.");
       
       // Reset form
       setFormData({
         name: "",
         email: "",
         phone: "",
-        projectType: "",
-        budget: "",
-        location: "",
         message: ""
       });
     } catch (error) {
@@ -75,7 +66,7 @@ const ContactForm = () => {
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <MessageSquare className="h-5 w-5 text-primary" />
-          <span>Project Inquiry Form</span>
+          <span>Contact Us</span>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -108,82 +99,29 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="phone">Phone Number *</Label>
-              <Input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="Enter your phone number"
-                className="mt-1"
-              />
-            </div>
-            <div>
-              <Label htmlFor="projectType">Project Type</Label>
-              <select
-                id="projectType"
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleChange}
-                className="mt-1 w-full px-3 py-2 border border-input bg-background rounded-md text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                <option value="">Select project type</option>
-                <option value="Premium Residential">Premium Residential</option>
-                <option value="Mixed-Use Development">Mixed-Use Development</option>
-                <option value="Commercial Complex">Commercial Complex</option>
-                <option value="Land Development & Plotting">Land Development & Plotting</option>
-                <option value="Infrastructure Project">Infrastructure Project</option>
-                <option value="Turnkey Solution">Turnkey Solution</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="budget">Approximate Budget</Label>
-              <select
-                id="budget"
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                className="mt-1 w-full px-3 py-2 border border-input bg-background rounded-md text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                <option value="">Select budget range</option>
-                <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
-                <option value="₹50 Lakhs - ₹1 Crore">₹50 Lakhs - ₹1 Crore</option>
-                <option value="₹1 Crore - ₹5 Crores">₹1 Crore - ₹5 Crores</option>
-                <option value="₹5 Crores - ₹10 Crores">₹5 Crores - ₹10 Crores</option>
-                <option value="Above ₹10 Crores">Above ₹10 Crores</option>
-                <option value="Prefer not to say">Prefer not to say</option>
-              </select>
-            </div>
-            <div>
-              <Label htmlFor="location">Project Location</Label>
-              <Input
-                id="location"
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                placeholder="Enter project location"
-                className="mt-1"
-              />
-            </div>
+          <div>
+            <Label htmlFor="phone">Phone Number *</Label>
+            <Input
+              id="phone"
+              name="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              placeholder="Enter your phone number"
+              className="mt-1"
+            />
           </div>
 
           <div>
-            <Label htmlFor="message">Project Details *</Label>
+            <Label htmlFor="message">Message *</Label>
             <Textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+              placeholder="Tell us how we can help you or any questions you may have..."
               className="mt-1 min-h-[120px]"
             />
           </div>
@@ -198,7 +136,7 @@ const ContactForm = () => {
               "Submitting..."
             ) : (
               <>
-                Send Inquiry
+                Send Message
                 <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </>
             )}

@@ -25,7 +25,7 @@ const About = () => {
     title: "Transparency & Trust",
     description: "No hidden costs, no guesswork - just honest communication and exceptional results."
   }];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background text-center">
       <Navigation />
       
       {/* Hero Section */}
@@ -36,9 +36,9 @@ const About = () => {
               About Auranex Realty
             </Badge>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              A Vision Brought to{" "}
+              Building Dreams into Reality{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-slate-950">
-                Life
+                with Precision and Excellence
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">

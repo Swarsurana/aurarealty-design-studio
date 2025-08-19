@@ -75,7 +75,7 @@ const Index = () => {
       {/* About Preview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center text-center lg:text-left">
             <div>
               <Badge variant="outline" className="mb-4 text-primary border-primary/20">
                 About Auranex
@@ -117,11 +117,11 @@ const Index = () => {
                   <p className="text-xs sm:text-sm opacity-80">Premium standards always</p>
                 </Card>
               </div>
-              <Card className="gradient-sophisticated p-4 sm:p-6 text-white text-center border-0">
-                <Sparkles className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-3 opacity-90" />
-                <h4 className="font-semibold text-sm sm:text-base mb-2">Our Process</h4>
-                <p className="text-xs sm:text-sm opacity-90">Transparency, precision, and excellence in every step</p>
-              </Card>
+                <Card className="gradient-hero p-4 sm:p-6 text-white text-center border-0">
+                  <Sparkles className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-3 opacity-90" />
+                  <h4 className="font-semibold text-sm sm:text-base mb-2">Our Process</h4>
+                  <p className="text-xs sm:text-sm opacity-90">Transparency, precision, and excellence in every step</p>
+                </Card>
             </div>
           </div>
         </div>
